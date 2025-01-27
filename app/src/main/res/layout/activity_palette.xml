@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaletteActivity">
+
+    <!-- Toolbar (en la parte superior) -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- ImageView para mostrar la imagen (en la mitad superior) -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textLayout"
+        android:scaleType="centerCrop" />
+
+    <!-- LinearLayout para los TextViews (en la mitad inferior) -->
+    <LinearLayout
+        android:id="@+id/textLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:weightSum="4">
+
+        <!-- TextViews en la parte inferior -->
+        <TextView
+            android:id="@+id/textViewLightVibrant"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Light Vibrant"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@android:color/transparent"  />
+
+        <TextView
+            android:id="@+id/textViewMuted"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Muted"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/textViewDarkMuted"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Dark Muted"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/textViewLightMuted"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Light Muted"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@android:color/transparent" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
