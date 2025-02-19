@@ -11,8 +11,16 @@ import android.app.ActivityOptions
 import android.os.Build
 import android.util.Pair
 
+/**
+ * Actividad principal que muestra una lista de imágenes en un RecyclerView.
+ * Al seleccionar una imagen, se abre `PaletteActivity` mostrando la imagen con su paleta de colores.
+ */
 class MainActivity : AppCompatActivity() {
 
+    /**
+     * Método llamado al crear la actividad. Inicializa la interfaz y configura el RecyclerView.
+     * @param savedInstanceState Estado guardado de la actividad, si existe.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -37,6 +45,10 @@ class MainActivity : AppCompatActivity() {
         recView.adapter = adaptador
         recView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
+        /**
+         * Manejar el clic en una tarjeta para abrir `PaletteActivity`.
+         * Se pasa la imagen seleccionada y se utiliza una transición compartida en API >= 21.
+         */
         adaptador.onClick = { tarjeta ->
             val intent = Intent(this, PaletteActivity::class.java)
             intent.putExtra("imageRes", tarjeta.imagen)  //Paso la imagen seleccionada

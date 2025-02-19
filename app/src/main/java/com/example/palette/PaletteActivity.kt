@@ -10,8 +10,17 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.palette.graphics.Palette
 
+/**
+ * Actividad `PaletteActivity`, encargada de mostrar una imagen seleccionada junto con
+ * una paleta de colores extraída de la misma.
+ */
 class PaletteActivity : AppCompatActivity() {
 
+    /**
+     * Método `onCreate`, se ejecuta al crear la actividad.
+     * Se encarga de configurar la interfaz, aplicar animaciones y extraer colores de la imagen.
+     * @param savedInstanceState Estado guardado de la actividad, si existe.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_palette)
@@ -62,6 +71,10 @@ class PaletteActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Método `onBackPressed`, ejecutado cuando el usuario presiona el botón de volver atrás.
+     * Se aplica una animación de salida tipo "slide".
+     */
     override fun onBackPressed() {
         super.onBackPressed()
 
