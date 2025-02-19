@@ -42,11 +42,11 @@ El objetivo principal del proyecto es crear una aplicación móvil que permita a
 
 Hay un plan de pruebas para garantizar la calidad y el rendimiento de la aplicación en los diferentes escenarios posibles que puedan haber:
 
-- [Pruebas de Integración](./PRUEBAS_INTEGRACION.md) 
-- [Pruebas de Regresión](./PRUEBAS_REGRESION.md) 
-- [Pruebas de Volumen y Estrés](./PRUEBAS_VOLUMEN_ESTRES.md) 
-- [Pruebas de Seguridad](./PRUEBAS_SEGURIDAD.md) 
-- [Pruebas de Uso](./PRUEBAS_USO.md) 
+- [Pruebas de Integración](./PRUEBAS_DE_INTEGRACION.md) 
+- [Pruebas de Regresión](./PRUEBAS_DE_REGRESION.md) 
+- [Pruebas de Volumen y Estrés](./PRUEBAS_DE_VOLUMEN_Y_ESTRES.md) 
+- [Pruebas de Seguridad](./PRUEBAS_DE_SEGURIDAD.md) 
+- [Pruebas de Uso](./PRUEBAS_DE_USO.md) 
 
 ---
 
